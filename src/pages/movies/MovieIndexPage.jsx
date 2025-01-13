@@ -7,22 +7,23 @@ export default function MovieIndexPage() {
     const url = import.meta.env.VITE_BACKEND_URL + "/api/movies";
     fetch(url)
       .then((res) => res.json())
-      .then((res) => {
-        setMovies(res.movies);
+
+      .then((data) => {
+        setMovies(data);
       });
   }, []);
-
   return (
     <>
       <div className="container py-4">
         <h1>Movies list </h1>
 
         <ul>
-          {movies.map((movie) => (
-            <li key={movie.id}>
-              <Link to={"/movies/" + movie.id}>{movie.title}</Link>
-            </li>
-          ))}
+          {movies &&
+            movies.map((movie) => (
+              <li key={movie.id}>
+                <Link to={"/movies/" + movie.id}>{movie.title}</Link>
+              </li>
+            ))}
         </ul>
       </div>
     </>
