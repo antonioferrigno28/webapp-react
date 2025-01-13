@@ -18,8 +18,8 @@ export default function Header() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" href="#">
-                  Pricing
+                <NavLink className="nav-link" to="/movies">
+                  Lista Film
                 </NavLink>
               </li>
               <li className="nav-item">
