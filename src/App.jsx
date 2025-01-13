@@ -3,6 +3,7 @@ import AboutPage from "./pages/AboutPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DefaultLayout from "./layouts/DefaultLayout";
 import MovieIndexPage from "./pages/movies/MovieIndexPage";
+import MovieShowPage from "./pages/movies/MovieShowPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 
             <Route path="movies">
               <Route index element={<MovieIndexPage />} />
+              <Route path=":id" element={<MovieShowPage />} />
             </Route>
           </Route>
         </Routes>
