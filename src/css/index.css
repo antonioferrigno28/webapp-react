@@ -13,7 +13,6 @@
   color: white;
 }
 
-/* Footer */
 .footer {
   position: fixed;
   bottom: 0;
@@ -24,7 +23,6 @@
   padding: 10px 0;
 }
 
-/* Main Content */
 .content {
   padding-bottom: 50px;
   overflow: auto;
