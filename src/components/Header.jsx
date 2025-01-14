@@ -5,7 +5,11 @@ export default function Header() {
     <nav className="navbar navbar-expand-lg bg-dark text-bg-primary py-4 header">
       <div className="container-fluid">
         <div className="collapse navbar-collapse" id="navbarNav">
-          <h1 className="me-3">CineBool01</h1>
+          <h1 className="me-3">
+            <NavLink to="/" className="text-decoration-none text-white">
+              CineBool01
+            </NavLink>
+          </h1>
           <ul className="navbar-nav ms-auto fw-bold">
             <li className="nav-item">
               <NavLink className="nav-link active" aria-current="page" to="/">
