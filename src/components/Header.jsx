@@ -6,7 +6,7 @@ export default function Header() {
       <div className="container-fluid">
         <div className="collapse navbar-collapse" id="navbarNav">
           <h1 className="me-3">CineBool01</h1>
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav ms-auto fw-bold">
             <li className="nav-item">
               <NavLink className="nav-link active" aria-current="page" to="/">
                 Home
