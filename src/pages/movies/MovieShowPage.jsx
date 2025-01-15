@@ -1,10 +1,15 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import ReviewsForm from "../../reviews/ReviewsForm.jsx";
 
 export default function MovieShowPage() {
   const { id: movieId } = useParams();
   const [movie, setMovie] = useState({});
   const [reviews, setReviews] = useState([]);
+
+  const updateReviews = (newReviews) => {
+    setReviews(newReviews);
+  };
 
   useEffect(() => {
     const url = import.meta.env.VITE_BACKEND_URL + "/api/movies/" + movieId;
@@ -39,6 +44,7 @@ export default function MovieShowPage() {
         </div>
 
         <div className="mt-5">
+          <ReviewsForm updateReviews={updateReviews} movieId={movieId} />
           <h2>Recensioni</h2>
           <div className="row">
             {reviews.map((review) => (
